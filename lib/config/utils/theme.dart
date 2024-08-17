@@ -1,4 +1,4 @@
-import 'package:earning_fish_machine_task/config/app_colors.dart';
+import 'package:earning_fish_machine_task/config/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,6 +18,7 @@ class SystemTheme {
 class AppTheme {
   static ThemeData light() {
     return ThemeData(
+      fontFamily: 'DMSans',
       scaffoldBackgroundColor: AppColors.lightWhite,
     );
   }

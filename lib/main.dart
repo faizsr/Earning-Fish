@@ -1,5 +1,5 @@
-import 'package:earning_fish_machine_task/config/theme.dart';
-import 'package:earning_fish_machine_task/view/fish/fish_detail_page.dart';
+import 'package:earning_fish_machine_task/config/utils/theme.dart';
+import 'package:earning_fish_machine_task/view/fish/send_fish_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,11 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemTheme.change(context);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Earning Fish',
-      theme: AppTheme.light(),
-      home: const FishDetailPage(),
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Earning Fish',
+        theme: AppTheme.light(),
+        home: const SendFishPage(),
+      ),
     );
   }
 }
