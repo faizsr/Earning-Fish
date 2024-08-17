@@ -3,8 +3,17 @@ import 'package:earning_fish_machine_task/config/utils/app_textstyles.dart';
 import 'package:flutter/material.dart';
 
 class CustomFilledButton extends StatelessWidget {
+  final String text;
+  final Color color;
+  final Color? txtColor;
+  final void Function()? onPressed;
+
   const CustomFilledButton({
     super.key,
+    this.txtColor,
+    required this.text,
+    required this.color,
+    required this.onPressed,
   });
 
   @override
@@ -16,11 +25,11 @@ class CustomFilledButton extends StatelessWidget {
       ),
       height: 50,
       minWidth: MediaQuery.of(context).size.width,
-      color: AppColors.darkBlue,
-      onPressed: () {},
+      color: color,
+      onPressed: onPressed,
       child: Text(
-        'Send',
-        style: AppTextstyles.medium16(AppColors.white),
+        text,
+        style: AppTextstyles.medium16(txtColor ?? AppColors.white),
       ),
     );
   }

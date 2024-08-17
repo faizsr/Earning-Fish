@@ -2,6 +2,7 @@ import 'package:earning_fish_machine_task/config/constants/app_colors.dart';
 import 'package:earning_fish_machine_task/config/utils/app_textstyles.dart';
 import 'package:earning_fish_machine_task/config/constants/strings.dart';
 import 'package:earning_fish_machine_task/config/common/custom_filled_button.dart';
+import 'package:earning_fish_machine_task/view/fish/widgets/confirmation_sheet.dart';
 import 'package:earning_fish_machine_task/view/fish/widgets/fish_detail_widget.dart';
 import 'package:earning_fish_machine_task/view/fish/widgets/recent_user_card.dart';
 import 'package:earning_fish_machine_task/view/fish/widgets/send_fish_appbar.dart';
@@ -84,9 +85,29 @@ class SendFishPage extends StatelessWidget {
         ),
         floatingActionButton: Container(
           margin: const EdgeInsets.fromLTRB(25, 10, 25, 10),
-          child: const CustomFilledButton(),
+          child: CustomFilledButton(
+            color: AppColors.darkBlue,
+            text: 'Send',
+            onPressed: () => onSendPressed(context),
+          ),
         ),
       ),
+    );
+  }
+
+  void onSendPressed(context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: AppColors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+      builder: (context) {
+        return const CustomBottomSheet();
+      },
     );
   }
 }
