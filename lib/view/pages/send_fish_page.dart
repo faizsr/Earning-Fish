@@ -2,10 +2,10 @@ import 'package:earning_fish_machine_task/config/constants/app_colors.dart';
 import 'package:earning_fish_machine_task/config/utils/app_textstyles.dart';
 import 'package:earning_fish_machine_task/config/constants/strings.dart';
 import 'package:earning_fish_machine_task/config/common/custom_filled_button.dart';
-import 'package:earning_fish_machine_task/view/fish/widgets/confirmation_sheet.dart';
-import 'package:earning_fish_machine_task/view/fish/widgets/fish_detail_widget.dart';
-import 'package:earning_fish_machine_task/view/fish/widgets/recent_user_card.dart';
-import 'package:earning_fish_machine_task/view/fish/widgets/send_fish_appbar.dart';
+import 'package:earning_fish_machine_task/view/widgets/confirmation_sheet.dart';
+import 'package:earning_fish_machine_task/view/widgets/fish_detail_widget.dart';
+import 'package:earning_fish_machine_task/view/widgets/recent_user_card.dart';
+import 'package:earning_fish_machine_task/view/widgets/send_fish_appbar.dart';
 import 'package:earning_fish_machine_task/config/common/text_input_field.dart';
 import 'package:flutter/material.dart';
 
